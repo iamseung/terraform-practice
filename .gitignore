@@ -1,0 +1,37 @@
+# Terraform 상태 파일 (인프라 현재 상태 + 민감 정보 포함)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# 로컬 디렉토리
+.terraform/
+
+# 민감 변수 파일 (비밀번호, API 키 등)
+*.tfvars
+*.tfvars.json
+!example.tfvars
+
+# 충돌 백업 파일
+*.backup
+
+# CLI 설정 파일
+.terraformrc
+terraform.rc
+
+# Lock 파일 (선택적 - 협업 시에는 커밋하기도 함)
+# .terraform.lock.hcl
+
+# 환경 변수 파일
+.env
+.env.*
+
+# AWS 자격 증명 (절대 커밋 금지!)
+*.pem
+*credentials*
+*secret*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
